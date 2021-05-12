@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище KKD_DBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Articles">
+    <Key>
+      <PropertyRef Name="artcle_id" />
+    </Key>
+    <Property Name="artcle_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nchar" MaxLength="255" Nullable="false" />
+    <Property Name="category" Type="nchar" MaxLength="20" />
+    <Property Name="descrpt" Type="text" Nullable="false" />
+    <Property Name="author" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="rating" Type="int" />
+    <Property Name="comm_title" Type="nchar" MaxLength="20" />
+    <Property Name="image" Type="char" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Bookmarks">
+    <Key>
+      <PropertyRef Name="bm_id" />
+    </Key>
+    <Property Name="bm_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="arttitle" Type="nchar" MaxLength="255" />
+    <Property Name="usern" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="categry_id" />
+    </Key>
+    <Property Name="categry_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category_name" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="comm_id" />
+    </Key>
+    <Property Name="comm_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="descr" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="authorc" Type="nchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="password" Type="nchar" MaxLength="8" Nullable="false" />
+    <Property Name="role" Type="nchar" MaxLength="6" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6035: В связи "FK_BAID" имеются столбцы, которые не являются частью ключа таблицы на первичной стороне связи. Связь исключена.
+        <Association Name="FK_BAID" />-->
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6035: В связи "FK_BUID" имеются столбцы, которые не являются частью ключа таблицы на первичной стороне связи. Связь исключена.
+        <Association Name="FK_BUID" />-->
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6035: В связи "FK_CAN" имеются столбцы, которые не являются частью ключа таблицы на первичной стороне связи. Связь исключена.
+        <Association Name="FK_CAN" />-->
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6035: В связи "FK_COAN" имеются столбцы, которые не являются частью ключа таблицы на первичной стороне связи. Связь исключена.
+        <Association Name="FK_COAN" />-->
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6035: В связи "FK_UAID" имеются столбцы, которые не являются частью ключа таблицы на первичной стороне связи. Связь исключена.
+        <Association Name="FK_UAID" />-->
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6035: В связи "FK_UCOID" имеются столбцы, которые не являются частью ключа таблицы на первичной стороне связи. Связь исключена.
+        <Association Name="FK_UCOID" />-->
+  <EntityContainer Name="Хранилище KKD_DBModelContainer">
+    <EntitySet Name="Articles" EntityType="Self.Articles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bookmarks" EntityType="Self.Bookmarks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

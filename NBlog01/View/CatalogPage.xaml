@@ -1,0 +1,120 @@
+﻿<Page x:Class="NBlog01.View.CatalogPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NBlog01.View"
+       xmlns:vm="clr-namespace:NBlog01.ViewModels.MainView"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CatalogPage">
+
+    <Grid>
+        <Grid.DataContext>
+            <vm:CatalogViewModel/>
+        </Grid.DataContext>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0"
+              Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+            <ListBox Grid.Column="0"
+                 ItemsSource="{Binding TempArticles}"
+                 SelectedItem="{Binding Selectarticle}"
+                 Style="{StaticResource MaterialDesignCardsListBox}"
+                 HorizontalAlignment="Left"
+                 Margin="0 7 0 10"
+                 MinWidth="375"
+                 ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                 ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Style="{StaticResource PanelStyle}"
+                                Width="360"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                            <TextBlock FontSize="14"
+                                   HorizontalAlignment="Center"
+                                   Foreground="White"
+                                   Text="{Binding Path=title}"/>
+                            <TextBlock Foreground="White"
+                                   HorizontalAlignment="Center"
+                                       Text="{Binding Path=category}"/>
+                            <TextBlock Text="{Binding Path=descrpt}"
+                                   HorizontalAlignment="Center"
+                                   Foreground="White"
+                                   x:Name="Category"/>
+                            <TextBlock Text="{Binding Path=author}"
+                                   HorizontalAlignment="Left"
+                                       Foreground="White"/>
+                            <TextBlock Text="{Binding Path=rating}"
+                                   HorizontalAlignment="Left"
+                                       Foreground="White"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button Grid.Row="1"
+                    Margin="3"
+                    Foreground="White">
+                <Grid>
+                    <materialDesign:PackIcon Kind="BookmarkAdd"
+                                             HorizontalAlignment="Left"
+                                             VerticalAlignment="Center"/>
+                    <Label Content="{DynamicResource Bookmarks}"
+                                   HorizontalAlignment="Right"
+                                   Foreground="White"
+                                   Margin="15 0 0 0"/>
+                </Grid>
+            </Button>
+        </Grid>
+
+        <Grid Grid.Column="1"
+              Margin="20 7 0 10"
+              DataContext="{Binding Selectarticle}">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0"
+                        Width="300"
+                        Style="{StaticResource PanelStyle}">
+                <TextBlock FontSize="14"
+                           Foreground="White"
+                           Text="{Binding Path=title}"
+                           HorizontalAlignment="Center"/>
+                <TextBlock Text="{Binding Path=category}"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/>
+                <TextBlock Text="{Binding Path=descrpt}"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/>
+                <TextBlock Text="{Binding Path=comm_title}"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/>
+                <TextBlock Text="{Binding Path=author}"
+                           Foreground="White"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Bottom"/>
+                <TextBlock Text="{Binding Path=rating}"
+                           Foreground="White"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Bottom"/>
+            </StackPanel>
+            <Image Grid.Row="1"
+                   Width="300"
+                   Stretch="UniformToFill"
+                   Margin="0 0 0 20"
+                   Source="{Binding Path=image, UpdateSourceTrigger=PropertyChanged}"/>
+        </Grid>
+    </Grid>
+</Page>

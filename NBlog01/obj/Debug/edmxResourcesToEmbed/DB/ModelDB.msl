@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelDBStoreContainer" CdmEntityContainer="ModelDBContainer">
+    <EntitySetMapping Name="UserSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDB.User)">
+        <MappingFragment StoreEntitySet="UserSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="user_password" ColumnName="user_password" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="bookmarks" ColumnName="bookmarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArticleSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDB.Article)">
+        <MappingFragment StoreEntitySet="ArticleSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="art_name" ColumnName="art_name" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDB.Comments)">
+        <MappingFragment StoreEntitySet="CommentsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookmarksSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDB.Bookmarks)">
+        <MappingFragment StoreEntitySet="BookmarksSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategorySet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDB.Category)">
+        <MappingFragment StoreEntitySet="CategorySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UserComments" TypeName="ModelDB.UserComments" StoreEntitySet="CommentsSet">
+      <EndProperty Name="User">
+        <ScalarProperty Name="Id" ColumnName="User_Id" />
+      </EndProperty>
+      <EndProperty Name="Comments">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ArticleComments" TypeName="ModelDB.ArticleComments" StoreEntitySet="CommentsSet">
+      <EndProperty Name="Article">
+        <ScalarProperty Name="Id" ColumnName="Article_Id" />
+      </EndProperty>
+      <EndProperty Name="Comments">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserBookmarks" TypeName="ModelDB.UserBookmarks" StoreEntitySet="BookmarksSet">
+      <EndProperty Name="User">
+        <ScalarProperty Name="Id" ColumnName="User_Id" />
+      </EndProperty>
+      <EndProperty Name="Bookmarks">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ArticleBookmarks" TypeName="ModelDB.ArticleBookmarks" StoreEntitySet="BookmarksSet">
+      <EndProperty Name="Article">
+        <ScalarProperty Name="Id" ColumnName="Article_Id" />
+      </EndProperty>
+      <EndProperty Name="Bookmarks">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ArticleCtaegory" TypeName="ModelDB.ArticleCtaegory" StoreEntitySet="CategorySet">
+      <EndProperty Name="Article">
+        <ScalarProperty Name="Id" ColumnName="Article_Id" />
+      </EndProperty>
+      <EndProperty Name="Ctaegory">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

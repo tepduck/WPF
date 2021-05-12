@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KKD_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Articles">
+    <Key>
+      <PropertyRef Name="artcle_id" />
+    </Key>
+    <Property Name="artcle_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="category" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="descrpt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="author" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="rating" Type="Int32" />
+    <Property Name="comm_title" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="image" Type="String" MaxLength="255" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Users" Relationship="KKD_DBModel.UsersArticles" FromRole="Articles" ToRole="Users" />
+    <NavigationProperty Name="Category" Relationship="KKD_DBModel.CategoryArticles" FromRole="Articles" ToRole="Category" />
+    <NavigationProperty Name="Comments" Relationship="KKD_DBModel.CommentsArticles" FromRole="Articles" ToRole="Comments" />
+    <NavigationProperty Name="Bookmarks" Relationship="KKD_DBModel.ArticlesBookmarks" FromRole="Articles" ToRole="Bookmarks" />
+  </EntityType>
+  <EntityType Name="Bookmarks">
+    <Key>
+      <PropertyRef Name="bm_id" />
+    </Key>
+    <Property Name="bm_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="arttitle" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="usern" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="KKD_DBModel.UsersBookmarks" FromRole="Bookmarks" ToRole="Users" />
+    <NavigationProperty Name="Articles" Relationship="KKD_DBModel.ArticlesBookmarks" FromRole="Bookmarks" ToRole="Articles" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="categry_id" />
+    </Key>
+    <Property Name="categry_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category_name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Articles" Relationship="KKD_DBModel.CategoryArticles" FromRole="Category" ToRole="Articles" />
+  </EntityType>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="comm_id" />
+    </Key>
+    <Property Name="comm_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="descr" Type="String" MaxLength="255" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="authorc" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Articles" Relationship="KKD_DBModel.CommentsArticles" FromRole="Comments" ToRole="Articles" />
+    <NavigationProperty Name="Users" Relationship="KKD_DBModel.UsersComments" FromRole="Comments" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="8" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="role" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Bookmarks" Relationship="KKD_DBModel.UsersBookmarks" FromRole="Users" ToRole="Bookmarks" />
+    <NavigationProperty Name="Articles" Relationship="KKD_DBModel.UsersArticles" FromRole="Users" ToRole="Articles" />
+    <NavigationProperty Name="Comments" Relationship="KKD_DBModel.UsersComments" FromRole="Users" ToRole="Comments" />
+  </EntityType>
+  <EntityContainer Name="KKD_DBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Articles" EntityType="Self.Articles" />
+    <EntitySet Name="Bookmarks" EntityType="Self.Bookmarks" />
+    <EntitySet Name="Category" EntityType="Self.Category" />
+    <EntitySet Name="Comments" EntityType="Self.Comments" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="UsersBookmarks" Association="KKD_DBModel.UsersBookmarks">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Bookmarks" EntitySet="Bookmarks" />
+    </AssociationSet>
+    <AssociationSet Name="UsersArticles" Association="KKD_DBModel.UsersArticles">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Articles" EntitySet="Articles" />
+    </AssociationSet>
+    <AssociationSet Name="CategoryArticles" Association="KKD_DBModel.CategoryArticles">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Articles" EntitySet="Articles" />
+    </AssociationSet>
+    <AssociationSet Name="CommentsArticles" Association="KKD_DBModel.CommentsArticles">
+      <End Role="Comments" EntitySet="Comments" />
+      <End Role="Articles" EntitySet="Articles" />
+    </AssociationSet>
+    <AssociationSet Name="ArticlesBookmarks" Association="KKD_DBModel.ArticlesBookmarks">
+      <End Role="Articles" EntitySet="Articles" />
+      <End Role="Bookmarks" EntitySet="Bookmarks" />
+    </AssociationSet>
+    <AssociationSet Name="UsersComments" Association="KKD_DBModel.UsersComments">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="UsersBookmarks">
+    <End Type="KKD_DBModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="KKD_DBModel.Bookmarks" Role="Bookmarks" Multiplicity="*" />
+  </Association>
+  <Association Name="UsersArticles">
+    <End Type="KKD_DBModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="KKD_DBModel.Articles" Role="Articles" Multiplicity="*" />
+  </Association>
+  <Association Name="CategoryArticles">
+    <End Type="KKD_DBModel.Category" Role="Category" Multiplicity="1" />
+    <End Type="KKD_DBModel.Articles" Role="Articles" Multiplicity="*" />
+  </Association>
+  <Association Name="CommentsArticles">
+    <End Type="KKD_DBModel.Comments" Role="Comments" Multiplicity="1" />
+    <End Type="KKD_DBModel.Articles" Role="Articles" Multiplicity="*" />
+  </Association>
+  <Association Name="ArticlesBookmarks">
+    <End Type="KKD_DBModel.Articles" Role="Articles" Multiplicity="1" />
+    <End Type="KKD_DBModel.Bookmarks" Role="Bookmarks" Multiplicity="*" />
+  </Association>
+  <Association Name="UsersComments">
+    <End Type="KKD_DBModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="KKD_DBModel.Comments" Role="Comments" Multiplicity="*" />
+  </Association>
+</Schema>

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelDB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelDBStoreContainer">
+    <EntitySet Name="UserSet" EntityType="ModelDB.Store.UserSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ArticleSet" EntityType="ModelDB.Store.ArticleSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CommentsSet" EntityType="ModelDB.Store.CommentsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BookmarksSet" EntityType="ModelDB.Store.BookmarksSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CategorySet" EntityType="ModelDB.Store.CategorySet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UserComments" Association="ModelDB.Store.UserComments">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Comments" EntitySet="CommentsSet" />
+    </AssociationSet>
+    <AssociationSet Name="ArticleComments" Association="ModelDB.Store.ArticleComments">
+      <End Role="Article" EntitySet="ArticleSet" />
+      <End Role="Comments" EntitySet="CommentsSet" />
+    </AssociationSet>
+    <AssociationSet Name="UserBookmarks" Association="ModelDB.Store.UserBookmarks">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Bookmarks" EntitySet="BookmarksSet" />
+    </AssociationSet>
+    <AssociationSet Name="ArticleBookmarks" Association="ModelDB.Store.ArticleBookmarks">
+      <End Role="Article" EntitySet="ArticleSet" />
+      <End Role="Bookmarks" EntitySet="BookmarksSet" />
+    </AssociationSet>
+    <AssociationSet Name="ArticleCtaegory" Association="ModelDB.Store.ArticleCtaegory">
+      <End Role="Article" EntitySet="ArticleSet" />
+      <End Role="Ctaegory" EntitySet="CategorySet" />
+    </AssociationSet>
+    <AssociationSet Name="UserArticle" Association="ModelDB.Store.UserArticle">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Article" EntitySet="ArticleSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="UserSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="user_password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="role" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="bookmarks" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ArticleSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="art_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="category" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="image" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CommentsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="author" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="article_id" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="User_Id" Type="int" Nullable="false" />
+    <Property Name="Article_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BookmarksSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="article_id" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="User_Id" Type="int" Nullable="false" />
+    <Property Name="Article_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CategorySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Article_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="UserComments">
+    <End Role="User" Type="ModelDB.Store.UserSet" Multiplicity="1" />
+    <End Role="Comments" Type="ModelDB.Store.CommentsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ArticleComments">
+    <End Role="Article" Type="ModelDB.Store.ArticleSet" Multiplicity="1" />
+    <End Role="Comments" Type="ModelDB.Store.CommentsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Article">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="Article_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserBookmarks">
+    <End Role="User" Type="ModelDB.Store.UserSet" Multiplicity="1" />
+    <End Role="Bookmarks" Type="ModelDB.Store.BookmarksSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Bookmarks">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ArticleBookmarks">
+    <End Role="Article" Type="ModelDB.Store.ArticleSet" Multiplicity="1" />
+    <End Role="Bookmarks" Type="ModelDB.Store.BookmarksSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Article">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Bookmarks">
+        <PropertyRef Name="Article_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ArticleCtaegory">
+    <End Role="Article" Type="ModelDB.Store.ArticleSet" Multiplicity="1" />
+    <End Role="Ctaegory" Type="ModelDB.Store.CategorySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Article">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ctaegory">
+        <PropertyRef Name="Article_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserArticle">
+    <End Role="User" Type="ModelDB.Store.UserSet" Multiplicity="1" />
+    <End Role="Article" Type="ModelDB.Store.ArticleSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

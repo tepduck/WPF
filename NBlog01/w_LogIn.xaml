@@ -1,0 +1,82 @@
+﻿<Window x:Class="NBlog01.MainWindow"
+        x:Name="w_LogIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NBlog01"
+        xmlns:vm="clr-namespace:NBlog01.ViewModels.Enter"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        ResizeMode="CanResizeWithGrip"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        MinHeight="450" MinWidth="600">
+    <Grid Background="#ffdadada">
+        <Grid.DataContext>
+            <vm:LogIn/>
+        </Grid.DataContext>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="3"
+                    Command="{Binding CloseWindow}"              
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="CloseBold"/>
+            </Button>
+            <Button Grid.Column="2"
+                    Command="{Binding MinimizeWindow}"
+                    CommandParameter="{Binding ElementName=w_LogIn}"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="WindowMinimize"/>
+            </Button>
+            <Button Grid.Column="1"
+                    Command="{Binding ChangeLng}"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="Language"/>
+            </Button>
+        </Grid>
+        
+        <Border MaxWidth="400"
+                MaxHeight="350"
+                Margin="15"
+                Background="White"
+                VerticalAlignment="Center"
+                Padding="15"
+                CornerRadius="20"
+                Grid.Row="1">
+            <StackPanel>
+                <TextBlock FontSize="30"
+                           FontWeight="Bold"
+                           Text="{DynamicResource Authoriz}"
+                           Margin="0 0 0 20"/>
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left"
+                            Command="{Binding Regestry}"
+                            CommandParameter="{Binding ElementName=Password}"
+                            Content="{DynamicResource Regestry}"/>
+                    <Button HorizontalAlignment="Right"
+                            Content="{DynamicResource Enter}"
+                            Command="{Binding EnterWindow}"
+                            CommandParameter="{Binding ElementName=w_LogIn}"
+                            Style="{StaticResource MaterialDesignFlatButton}"/>
+                </Grid>
+                <TextBox materialDesign:HintAssist.Hint="{DynamicResource EnterLogin}"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <PasswordBox materialDesign:HintAssist.Hint="{DynamicResource EnterPassword}"
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                             x:Name="Password"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
