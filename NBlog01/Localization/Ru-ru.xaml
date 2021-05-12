@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <v:String x:Key="Enter">Вход</v:String>
+    <v:String x:Key="Regestry">Регистрация</v:String>
+    <v:String x:Key="Authoriz">Авторизация</v:String>
+    <v:String x:Key="EnterPassword">Введите пароль:</v:String>
+    <v:String x:Key="EnterLogin">Введите логин:</v:String>
+    <v:String x:Key="AppName">Новостной блог</v:String>
+    <v:String x:Key="Welcome">Добро пожаловать</v:String>
+    <v:String x:Key="Home">Главная</v:String>
+    <v:String x:Key="Catalog">Каталог</v:String>
+    <v:String x:Key="Search">Поиск</v:String>
+    <v:String x:Key="Add">Добавить</v:String>
+    <v:String x:Key="Bookmarks">Закладки</v:String>
+    <v:String x:Key="AddArticle">Добавить статью</v:String>
+    <v:String x:Key="LookArticle">Просмотр статей</v:String>
+    <v:String x:Key="TitleSport">СПОРТ</v:String>
+    <v:String x:Key="TitleEconomy">ЭКОНОМИКА</v:String>
+    <v:String x:Key="Undo">Отменить</v:String>
+    <v:String x:Key="Redo">Повторить</v:String>
+    <v:String x:Key="EnterTitle">Введите заголовок:</v:String>
+    <v:String x:Key="EnterCategory">Категория:</v:String>
+    <v:String x:Key="EnterDescription">Введите описание:</v:String>
+    <v:String x:Key="EnterAuthor">Введите автора:</v:String>
+    <v:String x:Key="EnterPic">Загрузите фото:</v:String>
+</ResourceDictionary>

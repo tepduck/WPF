@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="48ef2077e9c34031ab4f6ffe42464f8d" Name="Diagram1">
+        <EntityTypeShape EntityType="KKD_DBModel.Articles" Width="1.5" PointX="8.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKD_DBModel.Bookmarks" Width="1.5" PointX="6.375" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKD_DBModel.Category" Width="1.5" PointX="8.25" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKD_DBModel.Comments" Width="1.5" PointX="3.875" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KKD_DBModel.Users" Width="1.5" PointX="5.75" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="KKD_DBModel.UsersBookmarks" />
+        <AssociationConnector Association="KKD_DBModel.UsersArticles" />
+        <AssociationConnector Association="KKD_DBModel.CategoryArticles" />
+        <AssociationConnector Association="KKD_DBModel.CommentsArticles" />
+        <AssociationConnector Association="KKD_DBModel.ArticlesBookmarks" />
+        <AssociationConnector Association="KKD_DBModel.UsersComments" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

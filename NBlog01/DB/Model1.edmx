@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище KKD_DBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Articles">
+          <Key>
+            <PropertyRef Name="artcle_id" />
+          </Key>
+          <Property Name="artcle_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nchar" MaxLength="255" Nullable="false" />
+          <Property Name="category" Type="nchar" MaxLength="20" />
+          <Property Name="descrpt" Type="text" Nullable="false" />
+          <Property Name="author" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="rating" Type="int" />
+          <Property Name="comm_title" Type="nchar" MaxLength="20" />
+          <Property Name="image" Type="char" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Bookmarks">
+          <Key>
+            <PropertyRef Name="bm_id" />
+          </Key>
+          <Property Name="bm_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="arttitle" Type="nchar" MaxLength="255" />
+          <Property Name="usern" Type="nchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="categry_id" />
+          </Key>
+          <Property Name="categry_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="category_name" Type="nchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Comments">
+          <Key>
+            <PropertyRef Name="comm_id" />
+          </Key>
+          <Property Name="comm_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="descr" Type="char" MaxLength="255" Nullable="false" />
+          <Property Name="authorc" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="password" Type="nchar" MaxLength="8" Nullable="false" />
+          <Property Name="role" Type="nchar" MaxLength="6" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6035: В связи "FK_BAID" имеются столбцы, которые не являются частью ключа таблицы на первичной стороне связи. Связь исключена.
+        <Association Name="FK_BAID" />-->
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6035: В связи "FK_BUID" имеются столбцы, которые не являются частью ключа таблицы на первичной стороне связи. Связь исключена.
+        <Association Name="FK_BUID" />-->
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6035: В связи "FK_CAN" имеются столбцы, которые не являются частью ключа таблицы на первичной стороне связи. Связь исключена.
+        <Association Name="FK_CAN" />-->
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6035: В связи "FK_COAN" имеются столбцы, которые не являются частью ключа таблицы на первичной стороне связи. Связь исключена.
+        <Association Name="FK_COAN" />-->
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6035: В связи "FK_UAID" имеются столбцы, которые не являются частью ключа таблицы на первичной стороне связи. Связь исключена.
+        <Association Name="FK_UAID" />-->
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6035: В связи "FK_UCOID" имеются столбцы, которые не являются частью ключа таблицы на первичной стороне связи. Связь исключена.
+        <Association Name="FK_UCOID" />-->
+        <EntityContainer Name="Хранилище KKD_DBModelContainer">
+          <EntitySet Name="Articles" EntityType="Self.Articles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bookmarks" EntityType="Self.Bookmarks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KKD_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Articles">
+          <Key>
+            <PropertyRef Name="artcle_id" />
+          </Key>
+          <Property Name="artcle_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="255" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="category" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="descrpt" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="author" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="rating" Type="Int32" />
+          <Property Name="comm_title" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="image" Type="String" MaxLength="255" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Users" Relationship="KKD_DBModel.UsersArticles" FromRole="Articles" ToRole="Users" />
+          <NavigationProperty Name="Category" Relationship="KKD_DBModel.CategoryArticles" FromRole="Articles" ToRole="Category" />
+          <NavigationProperty Name="Comments" Relationship="KKD_DBModel.CommentsArticles" FromRole="Articles" ToRole="Comments" />
+          <NavigationProperty Name="Bookmarks" Relationship="KKD_DBModel.ArticlesBookmarks" FromRole="Articles" ToRole="Bookmarks" />
+        </EntityType>
+        <EntityType Name="Bookmarks">
+          <Key>
+            <PropertyRef Name="bm_id" />
+          </Key>
+          <Property Name="bm_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="arttitle" Type="String" MaxLength="255" FixedLength="true" Unicode="true" />
+          <Property Name="usern" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Users" Relationship="KKD_DBModel.UsersBookmarks" FromRole="Bookmarks" ToRole="Users" />
+          <NavigationProperty Name="Articles" Relationship="KKD_DBModel.ArticlesBookmarks" FromRole="Bookmarks" ToRole="Articles" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="categry_id" />
+          </Key>
+          <Property Name="categry_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="category_name" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Articles" Relationship="KKD_DBModel.CategoryArticles" FromRole="Category" ToRole="Articles" />
+        </EntityType>
+        <EntityType Name="Comments">
+          <Key>
+            <PropertyRef Name="comm_id" />
+          </Key>
+          <Property Name="comm_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="descr" Type="String" MaxLength="255" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="authorc" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Articles" Relationship="KKD_DBModel.CommentsArticles" FromRole="Comments" ToRole="Articles" />
+          <NavigationProperty Name="Users" Relationship="KKD_DBModel.UsersComments" FromRole="Comments" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="8" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="role" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Bookmarks" Relationship="KKD_DBModel.UsersBookmarks" FromRole="Users" ToRole="Bookmarks" />
+          <NavigationProperty Name="Articles" Relationship="KKD_DBModel.UsersArticles" FromRole="Users" ToRole="Articles" />
+          <NavigationProperty Name="Comments" Relationship="KKD_DBModel.UsersComments" FromRole="Users" ToRole="Comments" />
+        </EntityType>
+        <EntityContainer Name="KKD_DBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Articles" EntityType="Self.Articles" />
+          <EntitySet Name="Bookmarks" EntityType="Self.Bookmarks" />
+          <EntitySet Name="Category" EntityType="Self.Category" />
+          <EntitySet Name="Comments" EntityType="Self.Comments" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <AssociationSet Name="UsersBookmarks" Association="KKD_DBModel.UsersBookmarks">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Bookmarks" EntitySet="Bookmarks" />
+          </AssociationSet>
+          <AssociationSet Name="UsersArticles" Association="KKD_DBModel.UsersArticles">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Articles" EntitySet="Articles" />
+          </AssociationSet>
+          <AssociationSet Name="CategoryArticles" Association="KKD_DBModel.CategoryArticles">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Articles" EntitySet="Articles" />
+          </AssociationSet>
+          <AssociationSet Name="CommentsArticles" Association="KKD_DBModel.CommentsArticles">
+            <End Role="Comments" EntitySet="Comments" />
+            <End Role="Articles" EntitySet="Articles" />
+          </AssociationSet>
+          <AssociationSet Name="ArticlesBookmarks" Association="KKD_DBModel.ArticlesBookmarks">
+            <End Role="Articles" EntitySet="Articles" />
+            <End Role="Bookmarks" EntitySet="Bookmarks" />
+          </AssociationSet>
+          <AssociationSet Name="UsersComments" Association="KKD_DBModel.UsersComments">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="UsersBookmarks">
+          <End Type="KKD_DBModel.Users" Role="Users" Multiplicity="1" />
+          <End Type="KKD_DBModel.Bookmarks" Role="Bookmarks" Multiplicity="*" />
+        </Association>
+        <Association Name="UsersArticles">
+          <End Type="KKD_DBModel.Users" Role="Users" Multiplicity="1" />
+          <End Type="KKD_DBModel.Articles" Role="Articles" Multiplicity="*" />
+        </Association>
+        <Association Name="CategoryArticles">
+          <End Type="KKD_DBModel.Category" Role="Category" Multiplicity="1" />
+          <End Type="KKD_DBModel.Articles" Role="Articles" Multiplicity="*" />
+        </Association>
+        <Association Name="CommentsArticles">
+          <End Type="KKD_DBModel.Comments" Role="Comments" Multiplicity="1" />
+          <End Type="KKD_DBModel.Articles" Role="Articles" Multiplicity="*" />
+        </Association>
+        <Association Name="ArticlesBookmarks">
+          <End Type="KKD_DBModel.Articles" Role="Articles" Multiplicity="1" />
+          <End Type="KKD_DBModel.Bookmarks" Role="Bookmarks" Multiplicity="*" />
+        </Association>
+        <Association Name="UsersComments">
+          <End Type="KKD_DBModel.Users" Role="Users" Multiplicity="1" />
+          <End Type="KKD_DBModel.Comments" Role="Comments" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище KKD_DBModelContainer" CdmEntityContainer="KKD_DBEntities1">
+          <EntitySetMapping Name="Articles">
+            <EntityTypeMapping TypeName="KKD_DBModel.Articles">
+              <MappingFragment StoreEntitySet="Articles">
+                <ScalarProperty Name="artcle_id" ColumnName="artcle_id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="category" ColumnName="category" />
+                <ScalarProperty Name="descrpt" ColumnName="descrpt" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+                <ScalarProperty Name="comm_title" ColumnName="comm_title" />
+                <ScalarProperty Name="image" ColumnName="image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bookmarks">
+            <EntityTypeMapping TypeName="KKD_DBModel.Bookmarks">
+              <MappingFragment StoreEntitySet="Bookmarks">
+                <ScalarProperty Name="bm_id" ColumnName="bm_id" />
+                <ScalarProperty Name="arttitle" ColumnName="arttitle" />
+                <ScalarProperty Name="usern" ColumnName="usern" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Category">
+            <EntityTypeMapping TypeName="KKD_DBModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="categry_id" ColumnName="categry_id" />
+                <ScalarProperty Name="category_name" ColumnName="category_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="KKD_DBModel.Comments">
+              <MappingFragment StoreEntitySet="Comments">
+                <ScalarProperty Name="comm_id" ColumnName="comm_id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="descr" ColumnName="descr" />
+                <ScalarProperty Name="authorc" ColumnName="authorc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="KKD_DBModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="role" ColumnName="role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
