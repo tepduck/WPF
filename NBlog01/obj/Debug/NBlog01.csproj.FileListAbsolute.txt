@@ -1,0 +1,163 @@
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\NBlog01.exe.config
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\NBlog01.exe
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\NBlog01.pdb
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\MaterialDesignColors.dll
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\MaterialDesignColors.pdb
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\App.g.cs
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\NBlog01_MarkupCompile.cache
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\NBlog01_MarkupCompile.lref
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\App.baml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\NBlog01.g.resources
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\NBlog01.Properties.Resources.resources
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\NBlog01.csproj.GenerateResource.cache
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\NBlog01.csproj.CoreCompileInputs.cache
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\NBlog01.csproj.CopyComplete
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\NBlog01.exe
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\NBlog01.pdb
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\w_LogIn.g.cs
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\w_LogIn.baml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\View\Windows\Main.g.cs
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\View\Windows\Main.baml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\Localization\En-en.baml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\Localization\Ru-ru.baml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\View\Welcome.g.cs
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\Styles\Styles.baml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\View\Welcome.baml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\View\AddPage.g.cs
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\View\AddPage.baml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\View\SearchPage.g.cs
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\View\SearchPage.baml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\View\CatalogPage.g.cs
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\View\CatalogPage.baml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\View\BookmarkPage.g.cs
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\View\BookmarkPage.baml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\EntityFramework.dll
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\System.Data.SQLite.dll
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\EntityFramework.xml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\bin\Debug\System.Data.SQLite.xml
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\NBlog01.csprojAssemblyReference.cache
+C:\Users\ltepd\Desktop\NBlog01\NBlog01\obj\Debug\NBlog01_Content.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\Localization\En-en.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\Localization\Ru-ru.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\Styles\Styles.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\AddPage.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\BookmarkPage.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\CatalogPage.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\SearchPage.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\Welcome.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\Windows\Main.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\w_LogIn.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\App.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\NBlog01_MarkupCompile.cache
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\NBlog01_MarkupCompile.lref
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\NBlog01.exe
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\NBlog01.pdb
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\NBlog01.exe.config
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\NBlog01.exe
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\NBlog01.pdb
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\EntityFramework.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\MaterialDesignColors.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\System.Data.SQLite.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\EntityFramework.xml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\MaterialDesignColors.pdb
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\System.Data.SQLite.xml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\App.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\AddPage.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\BookmarkPage.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\CatalogPage.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\SearchPage.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\Welcome.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\Windows\Main.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\w_LogIn.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\NBlog01.g.resources
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\NBlog01.Properties.Resources.resources
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\NBlog01.csproj.GenerateResource.cache
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\NBlog01.csproj.CoreCompileInputs.cache
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\NBlog01.csproj.CopyComplete
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\AdminStuff\AdminDeleteArticlePage.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\AdminStuff\AdminDeleteUserPage.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\AdminStuff\AdminWelcomePage.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\AdminStuff\AdminDeleteArticlePage.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\AdminStuff\AdminDeleteUserPage.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\AdminStuff\AdminWelcomePage.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\NBlog01.csprojAssemblyReference.cache
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\Windows\AWindow.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\Windows\AWindow.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\Styles\PartTemplate.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\AdminStuff\AWelcome.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия\NBlog01\obj\Debug\View\AdminStuff\AWelcome.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\NBlog01.exe.config
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\NBlog01.exe
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\NBlog01.pdb
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\EntityFramework.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\MaterialDesignColors.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\System.Data.SQLite.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\EntityFramework.xml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\MaterialDesignColors.pdb
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\bin\Debug\System.Data.SQLite.xml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\NBlog01.csprojAssemblyReference.cache
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\Localization\En-en.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\Localization\Ru-ru.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\Styles\Styles.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\AddPage.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\AdminStuff\AdminDeleteArticlePage.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\AdminStuff\AdminDeleteUserPage.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\AdminStuff\AWelcome.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\BookmarkPage.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\CatalogPage.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\SearchPage.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\Welcome.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\Windows\AWindow.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\Windows\Main.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\w_LogIn.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\App.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\NBlog01_MarkupCompile.cache
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\NBlog01_MarkupCompile.lref
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\App.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\Styles\PartTemplate.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\AddPage.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\AdminStuff\AdminDeleteArticlePage.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\AdminStuff\AdminDeleteUserPage.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\AdminStuff\AWelcome.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\BookmarkPage.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\CatalogPage.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\SearchPage.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\Welcome.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\Windows\AWindow.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\View\Windows\Main.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\w_LogIn.baml
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\NBlog01.g.resources
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\NBlog01.Properties.Resources.resources
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\NBlog01.csproj.GenerateResource.cache
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\NBlog01.csproj.CoreCompileInputs.cache
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\NBlog01.csproj.CopyComplete
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\NBlog01.exe
+C:\Users\ltepd\Desktop\NBlog01 — копия — копия\NBlog01\obj\Debug\NBlog01.pdb

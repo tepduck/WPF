@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModelDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ModelDBContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UserSet" EntityType="ModelDB.User" />
+    <EntitySet Name="ArticleSet" EntityType="ModelDB.Article" />
+    <EntitySet Name="CommentsSet" EntityType="ModelDB.Comments" />
+    <AssociationSet Name="UserComments" Association="ModelDB.UserComments">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Comments" EntitySet="CommentsSet" />
+    </AssociationSet>
+    <AssociationSet Name="ArticleComments" Association="ModelDB.ArticleComments">
+      <End Role="Article" EntitySet="ArticleSet" />
+      <End Role="Comments" EntitySet="CommentsSet" />
+    </AssociationSet>
+    <EntitySet Name="BookmarksSet" EntityType="ModelDB.Bookmarks" />
+    <AssociationSet Name="UserBookmarks" Association="ModelDB.UserBookmarks">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Bookmarks" EntitySet="BookmarksSet" />
+    </AssociationSet>
+    <AssociationSet Name="ArticleBookmarks" Association="ModelDB.ArticleBookmarks">
+      <End Role="Article" EntitySet="ArticleSet" />
+      <End Role="Bookmarks" EntitySet="BookmarksSet" />
+    </AssociationSet>
+    <EntitySet Name="CategorySet" EntityType="ModelDB.Category" />
+    <AssociationSet Name="ArticleCtaegory" Association="ModelDB.ArticleCtaegory">
+      <End Role="Article" EntitySet="ArticleSet" />
+      <End Role="Ctaegory" EntitySet="CategorySet" />
+    </AssociationSet>
+    <AssociationSet Name="UserArticle" Association="ModelDB.UserArticle">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Article" EntitySet="ArticleSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_name" Type="String" Nullable="false" />
+    <Property Name="user_password" Type="String" Nullable="false" />
+    <Property Name="role" Type="String" Nullable="false" />
+    <NavigationProperty Name="Comments" Relationship="ModelDB.UserComments" FromRole="User" ToRole="Comments" />
+    <Property Name="bookmarks" Type="String" Nullable="false" />
+    <NavigationProperty Name="Bookmarks" Relationship="ModelDB.UserBookmarks" FromRole="User" ToRole="Bookmarks" />
+    <NavigationProperty Name="Article" Relationship="ModelDB.UserArticle" FromRole="User" ToRole="Article" />
+  </EntityType>
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="art_name" Type="String" Nullable="false" />
+    <Property Name="category" Type="String" Nullable="false" />
+    <Property Name="date" Type="String" Nullable="false" />
+    <Property Name="text" Type="String" Nullable="false" />
+    <Property Name="image" Type="String" Nullable="false" />
+    <NavigationProperty Name="Comments" Relationship="ModelDB.ArticleComments" FromRole="Article" ToRole="Comments" />
+    <NavigationProperty Name="Bookmarks" Relationship="ModelDB.ArticleBookmarks" FromRole="Article" ToRole="Bookmarks" />
+    <NavigationProperty Name="Category" Relationship="ModelDB.ArticleCtaegory" FromRole="Article" ToRole="Ctaegory" />
+    <NavigationProperty Name="User" Relationship="ModelDB.UserArticle" FromRole="Article" ToRole="User" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" Nullable="false" />
+    <Property Name="text" Type="String" Nullable="false" />
+    <Property Name="author" Type="String" Nullable="false" />
+    <Property Name="date" Type="String" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="ModelDB.UserComments" FromRole="Comments" ToRole="User" />
+    <Property Name="article_id" Type="String" Nullable="false" />
+    <NavigationProperty Name="Article" Relationship="ModelDB.ArticleComments" FromRole="Comments" ToRole="Article" />
+  </EntityType>
+  <Association Name="UserComments">
+    <End Type="ModelDB.User" Role="User" Multiplicity="1" />
+    <End Type="ModelDB.Comments" Role="Comments" Multiplicity="*" />
+  </Association>
+  <Association Name="ArticleComments">
+    <End Type="ModelDB.Article" Role="Article" Multiplicity="1" />
+    <End Type="ModelDB.Comments" Role="Comments" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Bookmarks">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="article_id" Type="String" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="ModelDB.UserBookmarks" FromRole="Bookmarks" ToRole="User" />
+    <NavigationProperty Name="Article" Relationship="ModelDB.ArticleBookmarks" FromRole="Bookmarks" ToRole="Article" />
+  </EntityType>
+  <Association Name="UserBookmarks">
+    <End Type="ModelDB.User" Role="User" Multiplicity="1" />
+    <End Type="ModelDB.Bookmarks" Role="Bookmarks" Multiplicity="*" />
+  </Association>
+  <Association Name="ArticleBookmarks">
+    <End Type="ModelDB.Article" Role="Article" Multiplicity="1" />
+    <End Type="ModelDB.Bookmarks" Role="Bookmarks" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Article" Relationship="ModelDB.ArticleCtaegory" FromRole="Ctaegory" ToRole="Article" />
+  </EntityType>
+  <Association Name="ArticleCtaegory">
+    <End Type="ModelDB.Article" Role="Article" Multiplicity="1" />
+    <End Type="ModelDB.Category" Role="Ctaegory" Multiplicity="*" />
+  </Association>
+  <Association Name="UserArticle">
+    <End Type="ModelDB.User" Role="User" Multiplicity="1" />
+    <End Type="ModelDB.Article" Role="Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

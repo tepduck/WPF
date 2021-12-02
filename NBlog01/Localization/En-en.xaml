@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="Enter">Enter</v:String>
+    <v:String x:Key="Regestry">Registration</v:String>
+    <v:String x:Key="Authoriz">Authorization</v:String>
+    <v:String x:Key="EnterPassword">Enter password:</v:String>
+    <v:String x:Key="EnterLogin">Enter login:</v:String>
+    <v:String x:Key="AppName">Name</v:String>
+    <v:String x:Key="Welcome">Welcome</v:String>
+    <v:String x:Key="Home">Home</v:String>
+    <v:String x:Key="Catalog">Catalog</v:String>
+    <v:String x:Key="Search">Search</v:String>
+    <v:String x:Key="Add">Add</v:String>
+    <v:String x:Key="Bookmarks">Bookmarks</v:String>
+    <v:String x:Key="AddArticle">Add Article</v:String>
+    <v:String x:Key="LookArticle">See new Articles</v:String>
+    <v:String x:Key="TitleSport">SPORT</v:String>
+    <v:String x:Key="TitleEconomy">ECONOMY</v:String>
+    <v:String x:Key="Undo">Undo</v:String>
+    <v:String x:Key="Redo">Redo</v:String>
+    <v:String x:Key="EnterTitle">Enter Title:</v:String>
+    <v:String x:Key="EnterCategory">Enter Category:</v:String>
+    <v:String x:Key="EnterDescription">Enter Description:</v:String>
+    <v:String x:Key="EnterAuthor">Comment:</v:String>
+    <v:String x:Key="EnterPic">Load Image:</v:String>
+</ResourceDictionary>

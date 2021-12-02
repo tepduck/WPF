@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="NBlog01.View.AddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NBlog01.View"
+      xmlns:vm="clr-namespace:NBlog01.ViewModels.MainView"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <Grid.DataContext>
+            <vm:AddPageViewModel/>
+        </Grid.DataContext>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Border Style="{DynamicResource BorderStyle}"
+                    CornerRadius="20"
+                    Height="350"
+                    Width="580">
+                <StackPanel>
+                    <Label Content="{DynamicResource EnterTitle}"
+                           TextBlock.Foreground="White"
+                           HorizontalAlignment="Center"
+                           FontSize="15" 
+                           FontWeight="Bold"/>
+                    <TextBox Style="{StaticResource LogInTextBox}"
+                             HorizontalAlignment="Center"
+                             Width="200"
+                             Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Label Content="{DynamicResource EnterCategory}"
+                           TextBlock.Foreground="White"
+                           HorizontalAlignment="Center"
+                           FontSize="15" 
+                           FontWeight="Bold"/>
+                    <TextBox Style="{StaticResource LogInTextBox}"
+                             HorizontalAlignment="Center"
+                             Width="200"
+                             Text="{Binding Category, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Label Content="{DynamicResource EnterDescription}"
+                           TextBlock.Foreground="White"
+                           HorizontalAlignment="Center"
+                           FontSize="15" 
+                           FontWeight="Bold"/>
+                    <TextBox Style="{StaticResource LogInTextBox}"
+                             HorizontalAlignment="Center"
+                             Width="400"
+                             Height="85"
+                             TextWrapping="Wrap"
+                             ScrollViewer.VerticalScrollBarVisibility="Auto"
+                             Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Label Content="{DynamicResource EnterAuthor}"
+                           TextBlock.Foreground="White"
+                           HorizontalAlignment="Center"
+                           FontSize="15" 
+                           FontWeight="Bold"/>
+                    <TextBox Style="{StaticResource LogInTextBox}"
+                             HorizontalAlignment="Center"
+                             Width="200"
+                             Text="{Binding Comment, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Label Content="{DynamicResource EnterPic}"
+                           TextBlock.Foreground="White"
+                           HorizontalAlignment="Center"
+                           FontSize="15" 
+                           FontWeight="Bold"/>
+                    <Button Content="{DynamicResource EnterPic}"
+                            Command="{Binding AddImage}"
+                            Width="100"
+                            Margin="0 0 0 10"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Button
+                    Command="{Binding AddArticle}"
+                    Content="{DynamicResource AddArticle}"
+                    Style="{StaticResource MaterialDesignFlatButton}"/>
+        </Grid>
+    </Grid>
+</UserControl>

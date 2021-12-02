@@ -1,0 +1,156 @@
+﻿<Window x:Class="NBlog01.View.Windows.Main"
+        x:Name="w_Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NBlog01.View.Windows"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:vm="clr-namespace:NBlog01.ViewModels.Enter"
+        mc:Ignorable="d"
+        Title="Main"
+        ResizeMode="CanResizeWithGrip"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        MinHeight="450" MinWidth="600">
+    <Grid Background="White">
+        <Grid.DataContext>
+            <vm:MainVM/>
+        </Grid.DataContext>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0"
+              Background="#0D172E">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0"
+                   Foreground="White"
+                   Content="{DynamicResource AppName}"
+                   FontWeight="Bold"
+                   VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center"
+                   FontSize="20"/>
+            <Button Grid.Column="1"
+                    Foreground="White"
+                    Command="{Binding ResizeWindow}"
+                    CommandParameter="{Binding ElementName=w_Main}"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="Resize"/>
+            </Button>
+            <Button Grid.Column="4"
+                    Foreground="White"
+                    Command="{Binding CloseWindow}"
+                    CommandParameter="{Binding ElementName=w_Main}"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="CloseBold"/>
+            </Button>
+            <Button Grid.Column="3"
+                    Foreground="White"
+                    Command="{Binding MinimizeWindow}"
+                    CommandParameter="{Binding ElementName=w_Main}"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="WindowMinimize"/>
+            </Button>
+            <Button Grid.Column="2"
+                    Foreground="White"
+                    Command="{Binding MaximizeWindow}"
+                    CommandParameter="{Binding ElementName=w_Main}"
+                    Style="{StaticResource MaterialDesignFlatButton}">
+                <materialDesign:PackIcon Kind="WindowMaximize"/>
+            </Button>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0"
+                  Background="#034569">
+                <StackPanel VerticalAlignment="Top">
+                    <Button Command="{Binding SetHomePage}"
+                            Foreground="White"
+                            Style="{StaticResource MaterialDesignFlatButton}">
+                        <Grid>
+                            <materialDesign:PackIcon Kind="Home"
+                                                     HorizontalAlignment="Left"
+                                                     VerticalAlignment="Center"/>
+                            <Label Content="{DynamicResource Home}"
+                                   HorizontalAlignment="Right"
+                                   Foreground="White"
+                                   Margin="15 0 0 0"/>
+                        </Grid>
+                    </Button>
+                    <Button Foreground="White"
+                            Command="{Binding SetmainNewsPage}"
+                            Style="{StaticResource MaterialDesignFlatButton}">
+                        <Grid>
+                            <materialDesign:PackIcon Kind="Newspaper"
+                                                     HorizontalAlignment="Left"
+                                                     VerticalAlignment="Center"/>
+                            <Label Content="{DynamicResource Catalog}"
+                                   HorizontalAlignment="Right"
+                                   Foreground="White"
+                                   Margin="15 0 0 0"/>
+                        </Grid>
+                    </Button>
+                    <Button Foreground="White"
+                            Command="{Binding SetSearchPage}"
+                            Style="{StaticResource MaterialDesignFlatButton}">
+                        <Grid>
+                            <materialDesign:PackIcon Kind="Search"
+                                                     HorizontalAlignment="Left"
+                                                     VerticalAlignment="Center"/>
+                            <Label Content="{DynamicResource Search}"
+                                   HorizontalAlignment="Right"
+                                   Foreground="White"
+                                   Margin="15 0 0 0"/>
+                        </Grid>
+                    </Button>
+                    <Button Foreground="White"
+                            Command="{Binding SetAddPage}"
+                            Style="{StaticResource MaterialDesignFlatButton}">
+                        <Grid>
+                            <materialDesign:PackIcon Kind="LibraryAdd"
+                                                     HorizontalAlignment="Left"
+                                                     VerticalAlignment="Center"/>
+                            <Label Content="{DynamicResource Add}"
+                                   HorizontalAlignment="Right"
+                                   Foreground="White"
+                                   Margin="15 0 0 0"/>
+                        </Grid>
+                    </Button>
+                    <Button Foreground="White"
+                            Command="{Binding SetBookmarkPage}"
+                            Style="{StaticResource MaterialDesignFlatButton}">
+                        <Grid>
+                            <materialDesign:PackIcon Kind="Bookmark"
+                                                     HorizontalAlignment="Left"
+                                                     VerticalAlignment="Center"/>
+                            <Label Content="{DynamicResource Bookmarks}"
+                                   HorizontalAlignment="Right"
+                                   Foreground="White"
+                                   Margin="15 0 0 0"/>
+                        </Grid>
+                    </Button>
+                </StackPanel>
+                <Image VerticalAlignment="Bottom"
+                       Source="Planet.jpg"
+                       Stretch="UniformToFill"
+                       Height="100"/>
+            </Grid>
+            <ContentControl Grid.Column="1"
+                            Content="{Binding Current}"/>
+        </Grid>
+    </Grid>
+</Window>

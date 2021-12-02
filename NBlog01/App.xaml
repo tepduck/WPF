@@ -1,0 +1,47 @@
+﻿<Application x:Class="NBlog01.App"
+             xmlns:vm="clr-namespace:NBlog01.ViewModels.MainView"
+             xmlns:avm="clr-namespace:NBlog01.ViewModels.AdminVM"
+             xmlns:v="clr-namespace:NBlog01.View"
+             xmlns:av="clr-namespace:NBlog01.View.AdminStuff"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NBlog01"
+             StartupUri="w_LogIn.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Localization/Ru-ru.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type vm:UserWelcome}">
+                <v:Welcome/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:WelcomeViewModel}">
+                <av:AWelcome/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:CatalogViewModel}">
+                <v:CatalogPage/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:AddPageViewModel}">
+                <v:AddPage/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:BookmarkPageViewModel}">
+                <v:BookmarkPage/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type avm:DeleteArticleVM}">
+                <av:AdminDeleteArticlePage/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type avm:DeleteUserVM}">
+                <av:AdminDeleteUserPage/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:SearchVM}">
+                <v:SearchPage/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

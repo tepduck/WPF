@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище KKD_DBModelContainer" CdmEntityContainer="KKD_DBEntities1">
+    <EntitySetMapping Name="Articles">
+      <EntityTypeMapping TypeName="KKD_DBModel.Articles">
+        <MappingFragment StoreEntitySet="Articles">
+          <ScalarProperty Name="artcle_id" ColumnName="artcle_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="descrpt" ColumnName="descrpt" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="comm_title" ColumnName="comm_title" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bookmarks">
+      <EntityTypeMapping TypeName="KKD_DBModel.Bookmarks">
+        <MappingFragment StoreEntitySet="Bookmarks">
+          <ScalarProperty Name="bm_id" ColumnName="bm_id" />
+          <ScalarProperty Name="arttitle" ColumnName="arttitle" />
+          <ScalarProperty Name="usern" ColumnName="usern" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Category">
+      <EntityTypeMapping TypeName="KKD_DBModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="categry_id" ColumnName="categry_id" />
+          <ScalarProperty Name="category_name" ColumnName="category_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="KKD_DBModel.Comments">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="comm_id" ColumnName="comm_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="authorc" ColumnName="authorc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="KKD_DBModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
